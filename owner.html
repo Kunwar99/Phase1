@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owner</title>
+</head>
+<body>
+    <header>
+        <h4 class="mainheading">Create a Workspace</h4>
+    </header>
+
+    <form class="" onsubmit="" action="" >
+        <input type="text"  placeholder="Wokspace Name" name="name" id="namee"/>
+        <input type="text"  placeholder="Wokspace Category" name="category" id="category"/>
+        <input type="number" placeholder="Phone" id="phone" name="phone" />
+        <input type="submit"   class="submit" onclick="ssubmit"  id="button" value="submit"/>
+    </form>
+
+    <div class="showlist">
+        <h4>Workspaces</h4>
+        <table class="tableheading" id="tableheading">
+            <tr><th>Workspace</th><th>Category</th><th>Phone</th></tr>
+        </table>
+    </div>
+</body>
+<script>
+
+function ssubmit()
+{
+        // get value from the input text
+        var inputText = document.getElementById('namee').value;
+        var inputText = document.getElementById('category').value;
+        var inputText = document.getElementById('phone').value;
+
+    // append data to the array
+    freeArr.push(inputText);
+    var pval = "";
+    for(i = 0; i < freeArr.length; i++)
+    {
+        pval = pval + freeArr[i];
+    }
+        // display array data 
+        document.getElementById('button').innerHTML = pval;
+    }
+
+</script>
+
+</html>
